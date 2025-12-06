@@ -1,35 +1,43 @@
-# Korean Portal Weather Crawler
+---
 
-A small, production-style Python example built with **Selenium** to scrape basic weather information from a Korean weather portal (example: Naver Weather).
-
-This project is **unofficial** and not affiliated with Naver.  
-It is intended for learning, demonstration, and portfolio purposes.
+## Overview
+A production-style crawler that reliably extracts structured weather data with retry logic, logging, and clean outputs for automation pipelines.
 
 ---
 
-## 1. Overview
-
-This project is intentionally simple but demonstrates several professional engineering practices:
-
-- Structured, maintainable code layout  
-- Dataclass-based result model  
-- Stable scraping using `WebDriverWait`  
-- Fallback selector strategy  
-- Configurable logging  
-- CLI + programmatic interfaces  
-- Example test included  
-- Demo video provided
+## What this is for
+- Collecting consistent weather datasets for reports and scheduled jobs.
+- Serving as a template for resilient scraping workflows.
 
 ---
 
-## 2. Demo Video
+## Key features
+- Structured extraction with clear output formats.
+- Retry/backoff and logging for real-world stability.
+- Easy to integrate into larger data pipelines.
+
+---
+
+## Edge cases handled
+- Handles transient network or page load issues with retries.
+- Avoids silent data corruption via structured logs and validation points.
+- Designed for scheduled re-runs with consistent results.
+
+---
+
+## Maintenance-ready by design
+Config-driven design and modular extractors make it safe to update selectors or add new targets over time.
+
+---
+
+## Demo Video
 
 YouTube Demo:  
 https://youtu.be/PpjXFMnaGWA
 
 ---
 
-## 3. Features
+## Features
 
 - Scrapes:
   - Location
@@ -42,7 +50,7 @@ https://youtu.be/PpjXFMnaGWA
 
 ---
 
-## 4. Why This Project Exists
+## Why This Project Exists
 
 This crawler was created as a **clean and structured portfolio project** to demonstrate:
 
@@ -56,7 +64,7 @@ The goal is clarity and engineering quality rather than complexity.
 
 ---
 
-## 5. Requirements
+## Requirements
 
 - Python 3.9+  
 - Google Chrome installed  
@@ -65,10 +73,10 @@ The goal is clarity and engineering quality rather than complexity.
 
 ---
 
-## 6. Installation
+## Installation
 
 ```bash
-git clone https://github.com/sydsyd0310/korean_portal_weather_crawler.git
+git clone https://github.com/nyongdev0310/korean_portal_weather_crawler.git
 cd korean_portal_weather_crawler
 
 python -m venv venv
@@ -81,7 +89,7 @@ pip install -r requirements.txt
 
 ---
 
-## 7. CLI Usage
+## CLI Usage
 
 ### Basic use
 ```bash
@@ -104,7 +112,7 @@ python korean_portal_weather_crawler.py --url "https://weather.naver.com/today/0
 
 ---
 
-## 8. Programmatic Usage
+## Programmatic Usage
 
 ```python
 from korean_portal_weather_crawler import run_crawler
@@ -121,7 +129,7 @@ print(data.to_dict())
 
 ---
 
-## 9. Test Example
+## Test Example
 
 ```python
 from korean_portal_weather_crawler import run_crawler
@@ -134,7 +142,7 @@ def test_run_crawler_basic():
 
 ---
 
-## 10. Project Structure
+## Project Structure
 
 ```bash
 korean_portal_weather_crawler.py        # Main crawler module
@@ -146,18 +154,18 @@ requirements.txt
 
 ---
 
-## 11. Notes
+## Notes
 
 - Weather portals frequently update their HTML structure.
 This project includes fallback selectors to reduce breakage.
 
 - Update the selector configuration if the site layout changes.
 
-- Respect website policies; avoid high-frequency automated scraping.
+- Respect website policies; avoid high-frequency automated scraping. **portfolio-oriented.**
 
 ---
 
-## 12. License
+## License
 
 This project is provided for demonstration and portfolio use.
 You may reference or adapt the code, but avoid high-volume automated scraping.

@@ -1,0 +1,1 @@
+python naver_weather_crawler.py --url "https://weather.naver.com/today/09140104" --no-headless --timeout 15 --log-level DEBUG
